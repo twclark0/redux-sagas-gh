@@ -1,6 +1,7 @@
+import { combineReducers } from 'redux'
 import * as TYPES from '../types'
 
-const intialState = {
+const initialState = {
     starWars: []
 }
 
@@ -11,7 +12,7 @@ const handleStarWarsFetchSuccess = (state, action) => {
     }
 } 
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     const handlers = {
         [TYPES.FETCH_STAR_WARS_SUCCESS]: handleStarWarsFetchSuccess
     }
@@ -19,3 +20,9 @@ export default (state = initialState, action) => {
         ? handlers[action.type](state, action)
         : state
 }
+
+const rootReducer = combineReducers({
+  reducer
+})
+
+export default rootReducer
