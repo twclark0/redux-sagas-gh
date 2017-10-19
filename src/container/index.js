@@ -6,7 +6,7 @@ const mapStateToProps = ({starWars}) => ({starWars})
 
 const bindActionsToDispatch = dispatch => (
     {
-        fetchStarWarsRequest: () => { dispatch(fetchStarWarsRequest) }
+        fetchStarWarsRequest: () => dispatch(fetchStarWarsRequest()) 
     }
 )
 
