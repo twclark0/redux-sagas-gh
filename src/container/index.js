@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import App from '../components/App'
 import { fetchStarWarsRequest } from '../actions'
 
-const mapStateToProps = ({reducer}) => ({reducer})
+const mapStateToProps = ({starWars}) => ({starWars})
 
 const bindActionsToDispatch = dispatch => (
     {

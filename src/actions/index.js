@@ -1,5 +1,5 @@
 import * as TYPES from '../types'
 
-export const fetchStarWarsRequest = () => {
+export const fetchStarWarsRequest = () => ({
     type: TYPES.FETCH_STAR_WARS_REQUEST
-}
+})
