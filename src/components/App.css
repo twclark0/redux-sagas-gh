@@ -1,3 +1,14 @@
 body {
     padding-left: 15px;
 }
+.model {
+    background: #808080;
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 140px;
+}
