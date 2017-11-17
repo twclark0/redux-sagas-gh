@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
 import App from '../components/App'
-import { fetchStarWarsRequest } from '../actions'
+import { fetchStarWarsRequest, queueChannelRequests } from '../actions'
 
 const mapStateToProps = ({starWars}) => ({starWars})
 
 const bindActionsToDispatch = dispatch => (
     {
-        fetchStarWarsRequest: () => dispatch(fetchStarWarsRequest()) 
+        fetchStarWarsRequest: () => dispatch(fetchStarWarsRequest()),
+        queueChannelRequest: () => dispatch(queueChannelRequests())  
     }
 )
 
