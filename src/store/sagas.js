@@ -1,10 +1,13 @@
-import { takeLatest } from 'redux-saga/effects'
+import { takeLatest, all } from 'redux-saga/effects'
 
 import * as TYPES from '../types'
-import { fetchPerson } from '../actions' 
+import { fetchPerson, fetchPlanets } from '../actions' 
 
 function* mySaga() {
-  yield takeLatest(TYPES.FETCH_STAR_WARS_REQUEST, fetchPerson);
+  yield all([
+    takeLatest(TYPES.FETCH_STAR_WARS_REQUEST, fetchPerson),
+    takeLatest(TYPES.FETCH_STAR_WARS_PLANET_REQUEST, fetchPlanets)
+  ])    
 }
 
 export default mySaga

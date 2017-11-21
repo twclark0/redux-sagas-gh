@@ -10,7 +10,11 @@ class App extends Component {
         <div>
           {this.props.starWars.people.map((person, i) => <h4 key={i}>{person.name}</h4>)}
         </div>
-        <button onClick={this.props.fetchStarWarsRequest}>Load More</button>
+        <div>
+          {this.props.starWars.planet.map((planet, i) => <h4 key={i}>{planet.name}</h4>)}
+        </div>
+        <button onClick={this.props.fetchStarWarsRequest}>Load People</button>
+        <button onClick={this.props.fetchStarWarsPlanetsRequest}>Load Planets</button>
       </div>
     );
   }
